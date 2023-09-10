@@ -52,31 +52,35 @@ const Mobile = ({ open, setOpen }) => {
                 </svg>
               </div>
             </div>
-            <ul className="flex flex-col">
-              {navbarData.map((data) => {
-                return (
-                  <li
-                    key={data.id}
-                    className="transition cursor-pointer hover:bg-[#FFF]/[0.05]"
-                  >
-                    <Scroll
-                      to={data.link}
-                      spy={true}
-                      offset={-50}
-                      smooth={true}
-                      className="px-4 py-4 block"
+            <div className="flex flex-col h-[calc(100%-80px)] justify-between">
+              <ul className="flex flex-col">
+                {navbarData.map((data) => {
+                  return (
+                    <li
+                      key={data.id}
+                      className="transition cursor-pointer hover:bg-[#FFF]/[0.05]"
                     >
-                      {data.title}
-                    </Scroll>
-                  </li>
-                );
-              })}
-            </ul>
-            <button className="w-full bg-linearBluePink hover:scale-110 active:scale-100 transition-all duration-300 px-6 py-3 custom-shadow my-2">
-              <Scroll to='#contact' spy={true} offset={-50} smooth={true}>
-                Bog`lanish
-              </Scroll>
-            </button>
+                      <Scroll
+                        to={data.link}
+                        spy={true}
+                        offset={-50}
+                        smooth={true}
+                        className="px-4 py-4 block"
+                      >
+                        {data.title}
+                      </Scroll>
+                    </li>
+                  );
+                })}
+              </ul>
+              <div className="px-4 py-4">
+                <button className="rounded-[10px] bg-linearBluePink w-full px-4 transition-all duration-300 px-6 py-3 custom-shadow">
+                  <Scroll to="#contact" spy={true} offset={-50} smooth={true}>
+                    Bog`lanish
+                  </Scroll>
+                </button>
+              </div>
+            </div>
           </motion.div>
         </>
       ) : (
