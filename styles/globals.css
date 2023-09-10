@@ -56,7 +56,7 @@
   }
 
   .custom-container {
-    @apply max-w-[1200px] mx-auto px-4;
+    @apply max-w-[1400px] mx-auto px-4;
   }
 
   .custom-shadow {
@@ -64,11 +64,11 @@
   }
 
   .blue-item {
-    @apply bg-[#1D4ED8]/[0.45] blur-[170px]
+    @apply bg-[#1D4ED8] blur-[70px] rounded-full
   }
 
   .pink-item {
-    @apply bg-[#D946EF]/[0.45] blur-[170px]
+    @apply bg-[#D946EF] blur-[70px] rounded-full pointer-events-none
   }
 
   .section-item {

@@ -18,6 +18,7 @@ module.exports = {
       },
       backgroundImage: {
         linearBluePink: "linear-gradient(90deg, #2563EB, #D946EF)",
+        linearBluePinkHover: "linear-gradient(90deg, #2563EB 60%, #D946EF 100%)",
         linearPurple: "linear-gradient(#8A7FD9, #402F8F)",
         linearRed: "linear-gradient(#D97F95, #923250)",
         linearBlue: "linear-gradient(#84CAFF, #84CAFF)",
