@@ -15,9 +15,8 @@ const Mobile = ({ open, setOpen }) => {
             transition={{
               stiffness: 500,
             }}
-            className="absolute overflow-hidden md:hidden block top-0 left-0 w-full h-screen bg-black z-[101]"
+            className="absolute overflow-hidden md:hidden block top-0 left-0 w-full h-screen bg-[url('/images/menu.png')] bg-cover z-[101]"
           >
-            
             <div className="my-2 py-2 px-4 flex flex-row justify-between items-center">
               <Link href={"/"} className="mr-8 font-bold">
                 Code Brigade
