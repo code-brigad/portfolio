@@ -74,7 +74,7 @@ const Mobile = ({ open, setOpen }) => {
             </ul>
             <button className="w-full bg-linearBluePink hover:scale-110 active:scale-100 transition-all duration-300 px-6 py-3 custom-shadow my-2">
               <Scroll to='#contact' spy={true} offset={-50} smooth={true}>
-                Bog'lanish
+                Bog`lanish
               </Scroll>
             </button>
           </motion.div>
