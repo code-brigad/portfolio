@@ -25,7 +25,7 @@ const Navbar = () => {
     <header className={`fixed z-[100] w-full`}>
       {isScroll ? (
         <motion.div
-          initial={{ scaleY: 0.6 }}
+          initial={{ scaleY: 0.4 }}
           animate={{ scaleY: 1 }}
           transition={{ stiffness: 500 }}
           className="w-full origin-top h-full absolute top-0 left-0 bg-[#1D2432]"
@@ -70,7 +70,7 @@ const Navbar = () => {
             </ul>
           </div>
           <button className="bg-linearBluePink hover:scale-110 transition-all duration-200 px-6 py-3 rounded-[10px] z-[102] active:scale-100 md:block hidden">
-            <Scroll to={"#contact"} spy={true} offset={-50} smooth={true}>
+            <Scroll to={'#contact'} spy={true} offset={-50} smooth={true}>
               Bog'lanish
             </Scroll>
           </button>
