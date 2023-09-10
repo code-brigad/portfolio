@@ -2,26 +2,31 @@ export const navbarData = [
     {
         id: 1,
         link: "#",
-        title: "Asosiy"
+        title: "Asosiy",
+        icon: "/images/icons/home.svg"
     },
     {
         id: 2,
         link: "#about",
-        title: "Ma'lumot"
+        title: "Ma'lumot",
+        icon: "/images/icons/info.svg"
     },
     {
         id: 3,
         link: "#services",
-        title: "Xizmatlar"
+        title: "Xizmatlar",
+        icon: "/images/icons/services.svg"
     },
     {
         id: 4,
         link: "#team",
-        title: "Jamoa"
+        title: "Jamoa",
+        icon: "/images/icons/team.svg"
     },
     {
         id: 5,
         link: "#projects",
-        title: "Projects"
+        title: "Projects",
+        icon: "/images/icons/projects.svg"
     },
 ]
