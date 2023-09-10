@@ -18,31 +18,11 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", listenScroll);
     };
-  }, [isScroll]);
+  }, []);
 
-  console.log(open);
   return (
     <header className={`fixed z-[100] w-full`}>
-      {isScroll ? (
-        <motion.div
-          initial={{ scaleY: 0.4 }}
-          animate={{ scaleY: 1 }}
-          transition={{ stiffness: 500 }}
-          className="w-full origin-top h-full absolute top-0 left-0 bg-[#1D2432]"
-        ></motion.div>
-      ) : (
-        ""
-      )}
-      {isScroll ? (
-        <div className="absolute top-0 left-0 h-full w-full overflow-hidden">
-          <div className="pink-item w-[70px] h-[70px] absolute top-[100px] left-[100px] z-[100]"></div>
-          <div className="blue-item w-[100px] h-[100px] absolute bottom-0 right-[100px] z-[100]"></div>
-          <div className="blue-item w-[70px] h-[70px] absolute top-[100vh] right-[100px] z-[100]"></div>
-          <div className="blue-item w-[80px] h-[80px] absolute top-[50vh] left-[0px] z-[100]"></div>
-        </div>
-      ) : (
-        ""
-      )}
+     
       <div className="custom-container py-4 relative">
         <div className="flex flex-row items-center justify-between">
           <div className="flex flex-row items-center">

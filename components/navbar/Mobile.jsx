@@ -17,12 +17,7 @@ const Mobile = ({ open, setOpen }) => {
             }}
             className="absolute overflow-hidden md:hidden block top-0 left-0 w-full h-screen bg-black z-[101]"
           >
-            <div>
-              <div className="pink-item w-[70px] h-[70px] absolute top-[70px] left-[100px] z-[100]"></div>
-              <div className="blue-item w-[100px] h-[100px] absolute bottom-0 left-[40px] z-[100]"></div>
-              <div className="blue-item w-[70px] h-[70px] absolute top-[100vh] right-[100px] z-[100]"></div>
-              <div className="blue-item w-[80px] h-[80px] absolute top-[50vh] left-[0px] z-[100]"></div>
-            </div>
+            
             <div className="my-2 py-2 px-4 flex flex-row justify-between items-center">
               <Link href={"/"} className="mr-8 font-bold">
                 Code Brigade

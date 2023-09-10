@@ -3,6 +3,8 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 const Home = () => {
   return (
     <main>
+      <div className='relative top-[100px]'>
+      </div>
     </main>
   )
 }
