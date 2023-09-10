@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { navbarData } from "@/data/navbar";
 import { Link as Scroll } from "react-scroll";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import Mobile from "./Mobile";
 
 const Navbar = () => {
@@ -21,11 +22,17 @@ const Navbar = () => {
 
   console.log(open);
   return (
-    <header
-      className={`fixed z-[100] w-full ${
-        isScroll ? "bg-[#1D2432] custom-shadow" : ""
-      }`}
-    >
+    <header className={`fixed z-[100] w-full`}>
+      {isScroll ? (
+        <motion.div
+          initial={{ scaleY: 0.6 }}
+          animate={{ scaleY: 1 }}
+          transition={{ stiffness: 500 }}
+          className="w-full origin-top h-full absolute top-0 left-0 bg-[#1D2432]"
+        ></motion.div>
+      ) : (
+        ""
+      )}
       {isScroll ? (
         <div className="absolute top-0 left-0 h-full w-full overflow-hidden">
           <div className="pink-item w-[70px] h-[70px] absolute top-[100px] left-[100px] z-[100]"></div>
@@ -39,7 +46,7 @@ const Navbar = () => {
       <div className="custom-container py-4 relative">
         <div className="flex flex-row items-center justify-between">
           <div className="flex flex-row items-center">
-            <Link href={"#"} className="mr-8 font-bold">
+            <Link href={"/"} className="mr-8 font-bold">
               Code Brigade
             </Link>
             <ul className="md:flex hidden flex-row items-center gap-4 transition">
