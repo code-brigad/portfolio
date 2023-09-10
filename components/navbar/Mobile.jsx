@@ -19,9 +19,9 @@ const Mobile = ({ open, setOpen }) => {
             className="absolute overflow-x-hidden md:hidden block top-0 left-0 w-full h-screen bg-[url('/images/menu.png')] bg-cover z-[101] flex flex-col justify-between"
           >
             <div>
-              <div className="my-2 py-2 px-4 flex flex-row justify-between items-center">
-                <Link href={"/"} className="mr-8 font-bold">
-                  Code Brigade
+              <div className="my-2 py-2 px-6 flex flex-row justify-between items-center">
+                <Link href={"/"} className="mr-8 font-bold text-[24px]">
+                  Brigade
                 </Link>
                 <div className="cursor-pointer" onClick={() => setOpen(!open)}>
                   <svg
@@ -55,7 +55,7 @@ const Mobile = ({ open, setOpen }) => {
                       key={data.id}
                       className="transition cursor-pointer hover:bg-[#FFF]/[0.05] flex flex-row items-center"
                     >
-                      <div className="px-4 py-4 flex flex-row items-center gap-4">
+                      <div className="px-6 py-4 flex flex-row items-center gap-4">
                         <Image
                           src={data.icon}
                           alt={data.title}
@@ -78,7 +78,7 @@ const Mobile = ({ open, setOpen }) => {
                 })}
               </ul>
             </div>
-            <div className="px-4 py-4">
+            <div className="px-6 py-4">
               <button className="rounded-[10px] bg-linearBluePink w-full px-4 transition-all duration-300 px-6 py-3 custom-shadow">
                 <Scroll to="#contact" spy={true} offset={-50} smooth={true}>
                   Bog`lanish

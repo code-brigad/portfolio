@@ -18,16 +18,26 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", listenScroll);
     };
-  }, []);
+  }, [isScroll]);
 
+  console.log(open);
   return (
     <header className={`fixed z-[100] w-full`}>
-     
+      {isScroll ? (
+        <motion.div
+          initial={{ scaleY: 0.6 }}
+          animate={{ scaleY: 1 }}
+          transition={{ stiffness: 500 }}
+          className="w-full origin-top h-full absolute top-0 left-0 bg-[url('/images/navbar.png')] object-contain"
+        ></motion.div>
+      ) : (
+        ""
+      )}
       <div className="custom-container py-4 relative">
         <div className="flex flex-row items-center justify-between">
           <div className="flex flex-row items-center">
-            <Link href={"/"} className="mr-8 font-bold">
-              Code Brigade
+            <Link href={"/"} className="mr-8 font-bold text-[24px]">
+              Brigade
             </Link>
             <ul className="md:flex hidden flex-row items-center gap-4 transition">
               {navbarData.map((data) => {
@@ -50,7 +60,7 @@ const Navbar = () => {
             </ul>
           </div>
           <button className="bg-linearBluePink hover:scale-110 transition-all duration-200 px-6 py-3 rounded-[10px] z-[102] active:scale-100 md:block hidden">
-            <Scroll to='#contact' spy={true} offset={-50} smooth={true}>
+            <Scroll to={'#contact'} spy={true} offset={-50} smooth={true}>
               Bog`lanish
             </Scroll>
           </button>
