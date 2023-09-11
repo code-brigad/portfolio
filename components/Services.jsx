@@ -75,7 +75,7 @@ const Services = () => {
                     <div className='bg-linearPurple w-[70px] rounded-full p-3'>
                         <Image src={"/images/icons/web.svg"} width={100} height={100} alt='app' />
                     </div>
-                    <p className='font-medium text-center font-yaSemibold'>Sayt Yaratish</p>
+                    <p className='font-medium text-center font-avertaBold text-[20px]'>Sayt Yaratish</p>
                     <p className='w-[100%]'>Siz xohlagan dizayndagi va darajadagi web saytlarni qisqa muddatda tayyorlab beramiz.</p>
                     <button className='flex gap-[5px] items-center justify-center'>
                         <p>Ko’proq o’qish</p><Image src={"/images/icons/more-arrow.svg"} width={12} height={20} alt='app' />
@@ -85,7 +85,7 @@ const Services = () => {
                     <div className='bg-linearRed w-[70px] rounded-full p-3'>
                         <Image src={"/images/icons/apps.svg"} width={100} height={100} alt='app' />
                     </div>
-                    <p className='font-medium text-center font-yaSemibold'>Mobile App yaratish</p>
+                    <p className='font-medium text-center font-avertaBold text-[20px]'>Mobile App yaratish</p>
                     <p className='w-[100%]'>Siz xohlagan dizayndagi va darajadagi mobile dasturlarni qisqa muddatda tayyorlab beramiz.</p>
                     <button className='flex gap-[5px] items-center justify-center'>
                         <p>Ko’proq o’qish</p><Image src={"/images/icons/more-arrow.svg"} width={12} height={20} alt='app' />
@@ -95,7 +95,7 @@ const Services = () => {
                     <div className='bg-linearBlue w-[70px] rounded-full p-3'>
                         <Image src={"/images/icons/crm.svg"} width={100} height={100} alt='app' />
                     </div>
-                    <p className='font-medium text-center font-yaSemibold'>CRM Dastur</p>
+                    <p className='font-medium text-center font-avertaBold text-[20px]'>CRM Dastur</p>
                     <p className='w-[100%]'>
                         Siz xohlagan dizayndagi va darajadagi CRM Dasturlarni tyyorlab beramiz.
                     </p>
@@ -107,7 +107,7 @@ const Services = () => {
                     <div className='bg-linearGreen w-[70px] rounded-full p-3'>
                         <Image src={"/images/icons/design.svg"} width={100} height={100} alt='app' />
                     </div>
-                    <p className='font-medium text-center font-yaSemibold'>Dizayn tayyorlash</p>
+                    <p className='font-medium text-center font-avertaBold text-[20px]'>Dizayn tayyorlash</p>
                     <p className='w-[100%]'>
                         Siz xohlagan turdagi dizaynlarni qisqa muddatda tayyorlab beramiz.
                     </p>
@@ -119,7 +119,7 @@ const Services = () => {
                     <div className='bg-linearAqua w-[70px] rounded-full p-3'>
                         <Image src={"/images/icons/smm.svg"} width={100} height={100} alt='app' />
                     </div>
-                    <p className='font-medium text-center font-yaSemibold'>SMM Xizmati</p>
+                    <p className='font-medium text-center font-avertaBold text-[20px]'>SMM Xizmati</p>
                     <p className='w-[100%]'>
                         Biz sizning ijtimoiy tarmoqlardagi saxifalaringizni siz xohlagan darajaga olib chiqib beramiz.
                     </p>
