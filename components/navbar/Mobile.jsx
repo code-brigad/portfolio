@@ -10,13 +10,14 @@ const Mobile = ({ open, setOpen }) => {
     <>
       {open ? (
         <>
+          <div className="w-full h-screen bg-[#FFF]/[0.05] backdrop-blur absolute top-0 left-0" onClick={() => setOpen(!open)}></div>
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{
               stiffness: 500,
             }}
-            className={`absolute overflow-x-hidden md:hidden block top-0 left-0 w-full h-screen bg-[url('/images/menu.png')] bg-cover flex flex-col justify-between`}
+            className={`absolute overflow-x-hidden md:hidden block top-0 left-0 min-w-[250px] w-[80%] h-screen bg-[url('/images/menu.png')] bg-cover flex flex-col justify-between`}
           >
             <div>
               <div className="my-2 py-2 px-6 flex flex-row justify-between items-center">
@@ -55,7 +56,7 @@ const Mobile = ({ open, setOpen }) => {
                       key={data.id}
                       className="transition cursor-pointer hover:bg-[#FFF]/[0.05] flex flex-row items-center"
                     >
-                      <div className="px-6 py-4 flex flex-row items-center gap-4">
+                      <div className="nav-link px-6 py-4 flex flex-row items-center gap-4">
                         <Image
                           src={data.icon}
                           alt={data.title}
@@ -66,7 +67,7 @@ const Mobile = ({ open, setOpen }) => {
                         <Scroll
                           to={data.link}
                           spy={true}
-                          offset={-50}
+                          offset={-80}
                           smooth={true}
                           className="block"
                         >
@@ -80,7 +81,7 @@ const Mobile = ({ open, setOpen }) => {
             </div>
             <div className="px-6 py-4">
               <button className="rounded-[10px] bg-linearBluePink w-full px-4 transition-all duration-300 px-6 py-3 custom-shadow">
-                <Scroll to="#contact" spy={true} offset={-50} smooth={true}>
+                <Scroll to="contact" spy={true} offset={-80} smooth={true}>
                   Bog`lanish
                 </Scroll>
               </button>

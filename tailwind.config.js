@@ -23,7 +23,7 @@ module.exports = {
         linearRed: "linear-gradient(#D97F95, #923250)",
         linearBlue: "linear-gradient(#84CAFF, #84CAFF)",
         linearGreen: "linear-gradient(#92EFC3, #2F8F5B)",
-        linearAqua: "linear-gradient(#84D8ED, #4292BB)",
+        linearAqua: "linear-gradient(#84D8ED, #4292BB)"
       },
       fontFamily: {
         yaBlack: 'YapariTrial-ExtraBold, sans-serif',

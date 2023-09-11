@@ -9,7 +9,7 @@ const Footer = () => {
       <ul className="flex lg:flex-row flex-col justify-between lg:gap-4 gap-10">
         <li>
           <ul className="flex flex-col gap-3">
-            <li className="font-yaBold mb-1">Brigade</li>
+            <li className="font-yaBold mb-1"><Link href={"/"}>Brigade</Link></li>
             <li className="flex flex-row gap-2 items-center">
               <svg
                 width="18"
@@ -77,7 +77,7 @@ const Footer = () => {
                 />
               </svg>
               <p>
-                <Link href="tel:+998901234567">90 123 4567</Link>
+                <Link href="tel:+998900610304">90 061 0304</Link>
               </p>
             </li>
             <li className="flex flex-row gap-2 items-center">
@@ -111,7 +111,7 @@ const Footer = () => {
             </li>
             <ul className="flex flex-row gap-3">
               <li className="p-[8px] border rounded-full opacity-[80%] hover:opacity-100 transition cursor-pointer">
-                <Link href="/" className="">
+                <Link href="https://t.me/code_brigad" target="_blank" className="">
                   <Image
                     src={"/images/icons/telegram.svg"}
                     alt="telegram"
@@ -122,7 +122,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="p-[8px] border rounded-full opacity-[80%] hover:opacity-100 transition cursor-pointer">
-                <Link href="/" className="">
+                <Link href="https://www.instagram.com/code_brigad/" target="_blank" className="">
                   <Image
                     src={"/images/icons/instagram.svg"}
                     alt="telegram"
@@ -144,7 +144,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="p-[8px] border rounded-full opacity-[80%] hover:opacity-100 transition cursor-pointer">
-                <Link href="/" className="">
+                <Link href="https://github.com/code-brigad" target="_blank" className="">
                   <Image
                     src={"/images/icons/github.svg"}
                     alt="telegram"
@@ -186,14 +186,14 @@ const Footer = () => {
           <ul className="flex flex-col gap-3">
             <li className="font-avertaSemiBold text-[18px] mb-1">Companiya</li>
             <li className="cursor-pointer">
-              <Scroll to={"/"} spy={true} offset={-50} smooth={true}>
+              <Scroll to={"about"} spy={true} offset={-80} smooth={true}>
                 Ma’lumot
               </Scroll>
             </li>
             <li className="cursor-pointer">
-              <Scroll to={"/"} spy={true} offset={-50} smooth={true}>
+              <Link href={"https://t.me/code_brigad"} target="_blank">
                 Yangiliklar
-              </Scroll>
+              </Link>
             </li>
           </ul>
         </li>
@@ -201,19 +201,19 @@ const Footer = () => {
           <ul className="flex flex-col gap-3">
             <li className="font-avertaSemiBold text-[18px] mb-1">Yordam</li>
             <li className="cursor-pointer">
-              <Scroll to={"/"} spy={true} offset={-50} smooth={true}>
+              <Link href={"https://t.me/brigade_support"} target="_blank">
                 Yordam Markazi
-              </Scroll>
+              </Link>
             </li>
             <li className="cursor-pointer">
-              <Scroll to={"/"} spy={true} offset={-50} smooth={true}>
+              <Link href={"https://t.me/brigade_support"} target="_blank">
                 Administrator
-              </Scroll>
+              </Link>
             </li>
             <li className="cursor-pointer">
-              <Scroll to={"/"} spy={true} offset={-50} smooth={true}>
+              <Link href={"tel:+998900610304"}>
                 Bog`lanish
-              </Scroll>
+              </Link>
             </li>
           </ul>
         </li>
@@ -221,14 +221,14 @@ const Footer = () => {
           <ul className="flex flex-col gap-3">
             <li className="font-avertaSemiBold text-[18px] mb-1">Manbalar</li>
             <li className="cursor-pointer">
-              <Scroll to={"/"} spy={true} offset={-50} smooth={true}>
+              <Link href={"https://github.com/code-brigad/portfolio"} target="_blank">
                 GitHub
-              </Scroll>
+              </Link>
             </li>
             <li className="cursor-pointer">
-              <Scroll to={"/"} spy={true} offset={-50} smooth={true}>
+              <Link href={"https://t.me/code_brigad"} target="_blank">
                 Telegram
-              </Scroll>
+              </Link>
             </li>
           </ul>
         </li>

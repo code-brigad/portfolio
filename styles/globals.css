@@ -115,3 +115,25 @@
     -webkit-text-fill-color: transparent;
   }
 }
+
+.slick-slider .slick-dots  {
+  @apply transition
+}
+
+.slick-slider .slick-dots li {
+  @apply w-[24px] h-[8px] bg-telegram rounded-[4px] transition
+}
+
+.slick-slider .slick-dots li.slick-active {
+  @apply scale-x-[1.5] bg-pink transition rounded
+}
+
+.slick-track {
+  display: flex !important;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.nav-link .active {
+  @apply text-pink scale-110 transition
+}

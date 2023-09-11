@@ -5,11 +5,13 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const Home = () => {
   return (
-    <main className='flex flex-col gap-4'>
+    <main className='flex flex-col'>
       <Hero />
-      <AboutUs />
-      <Services />
-      <Team />
+      <div className='flex flex-col gap-[60px]'>
+        <AboutUs />
+        <Services />
+        <Team />
+      </div>
     </main>
   )
 }

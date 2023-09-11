@@ -30,7 +30,7 @@ const AboutUs = () => {
     }
   }, [isInView]);
   return (
-    <div id="about" className="custom-container flex flex-col lg:items-center items-start justify-center w-full mt-[20px] gap-4">
+    <section id="about" className="custom-container flex flex-col lg:items-center items-start justify-center w-full mt-[20px] gap-4">
       <motion.div
         ref={ref}
         variants={container}
@@ -88,7 +88,7 @@ const AboutUs = () => {
           </p>
         </motion.li>
       </motion.ul>
-    </div>
+    </section>
   );
 };
 
