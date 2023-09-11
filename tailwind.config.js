@@ -26,12 +26,17 @@ module.exports = {
         linearAqua: "linear-gradient(#84D8ED, #4292BB)",
       },
       fontFamily: {
-        black: 'DMSans-Black, sans-serif',
-        extrabold: 'DMSans-ExtraBold, sans-serif',
-        bold: 'DMSans-Bold, sans-serif',
-        semibold: 'DMSans-SemiBold, sans-serif',
-        medium: 'DMSans-Medium, sans-serif',
-        regular: 'DMSans-Regular, sans-serif'
+        yaBlack: 'YapariTrial-ExtraBold, sans-serif',
+        yaExtrabold: 'YapariTrial-ExtraBold, sans-serif',
+        yaBold: 'YapariTrial-Bold, sans-serif',
+        yaSemibold: 'YapariTrial-SemiBold, sans-serif',
+        yaMedium: 'YapariTrial-Medium, sans-serif',
+        yaRegular: 'YapariTrial-Regular, sans-serif',
+        
+        avertaExtraBold: 'Averta-Cyrillic-ExtraBold, sans-serif',
+        avertaBold: 'Averta-Cyrillic-Bold, sans-serif',
+        avertaSemiBold: 'Averta-Cyrillic-SemiBold, sans-serif',
+        avertaRegular: 'Averta-Cyrillic-Regular, sans-serif',
       }
     },
   },

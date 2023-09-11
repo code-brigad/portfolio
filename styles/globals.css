@@ -3,50 +3,76 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "DMSans-Black";
-  src: url("../public/fonts/DMSans-Black.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "DMSans-ExtraBold";
-  src: url("../public/fonts/DMSans-ExtraBold.ttf") format("truetype");
+  font-family: "YapariTrial-ExtraBold";
+  src: url("../public/fonts/YapariTrial-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "DMSans-Bold";
-  src: url("../public/fonts/DMSans-Bold.ttf") format("truetype");
+  font-family: "YapariTrial-Bold";
+  src: url("../public/fonts/YapariTrial-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "DMSans-SemiBold";
-  src: url("../public/fonts/DMSans-SemiBold.ttf") format("truetype");
+  font-family: "YapariTrial-SemiBold";
+  src: url("../public/fonts/YapariTrial-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "DMSans-Medium";
-  src: url("../public/fonts/DMSans-Medium.ttf") format("truetype");
+  font-family: "YapariTrial-Medium";
+  src: url("../public/fonts/YapariTrial-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "DMSans-Regular";
-  src: url("../public/fonts/DMSans-Regular.ttf") format("truetype");
+  font-family: "YapariTrial-Regular";
+  src: url("../public/fonts/YapariTrial-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Averta-Cyrillic-ExtraBold";
+  src: url("../public/fonts/Averta\ Cyrillic\ ExtraBold.otf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Averta-Cyrillic-Bold";
+  src: url("../public/fonts/Averta\ Cyrillic\ Bold.otf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Averta-Cyrillic-SemiBold";
+  src: url("../public/fonts/Averta\ Cyrillic\ SemiBold.otf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Averta-Cyrillic-Regular";
+  src: url("../public/fonts/Averta\ Cyrillic\ Regular.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* bg-[url("/images/background.png")] */
 @layer base {
+  html {
+    font-family: 'Averta-Cyrillic-Regular, sans-serif';
+  }
+
   body {
-    @apply m-0 p-0 w-screen bg-black bg-[url("/images/background.png")] bg-cover h-screen outline-none list-none box-border font-regular text-white w-full h-full;
+    @apply m-0 p-0 w-screen bg-black bg-cover h-screen outline-none list-none box-border font-avertaRegular text-white w-full h-full overflow-x-hidden;
   }
 }
 
@@ -76,7 +102,7 @@
   }
 
   .title {
-    @apply font-bold lg:text-[42px] text-[24px];
+    @apply font-yaBold lg:text-[42px] text-[24px];
   }
 
   .subtitle {
