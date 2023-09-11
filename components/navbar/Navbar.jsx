@@ -34,7 +34,7 @@ const Navbar = () => {
       <div className="custom-container py-4 relative">
         <div className="flex flex-row items-center justify-between">
           <div className="flex flex-row items-center">
-            <Link href={"/"} className="mr-8 font-bold text-[24px]">
+            <Link href={"/"} className="mr-8 font-yaBold text-[24px]">
               Brigade
             </Link>
             <ul className="md:flex hidden flex-row items-center gap-4 transition">

@@ -20,7 +20,7 @@ const Mobile = ({ open, setOpen }) => {
           >
             <div>
               <div className="my-2 py-2 px-6 flex flex-row justify-between items-center">
-                <Link href={"/"} className="mr-8 font-bold text-[24px]">
+                <Link href={"/"} className="mr-8 font-yaBold text-[24px]">
                   Brigade
                 </Link>
                 <div className="cursor-pointer" onClick={() => setOpen(!open)}>
