@@ -46,7 +46,7 @@
 
 @layer base {
   body {
-    @apply m-0 p-0 w-screen bg-black h-screen outline-none list-none box-border font-regular text-white overflow-x-hidden;
+    @apply m-0 p-0 w-screen bg-black h-screen outline-none list-none box-border font-regular text-white w-full h-full;
   }
 }
 
@@ -64,22 +64,28 @@
   }
 
   .blue-item {
-    @apply bg-[#1D4ED8] blur-[70px] rounded-full
+    @apply bg-[#1D4ED8] blur-[70px] rounded-full;
   }
 
   .pink-item {
-    @apply bg-[#D946EF] blur-[70px] rounded-full pointer-events-none
+    @apply bg-[#D946EF] blur-[70px] rounded-full pointer-events-none;
   }
 
   .section-item {
-    @apply bg-[#FFF]/[0.05] border border-whiteBorder hover:border-pink transition p-4 rounded-[20px]
+    @apply bg-[#FFF]/[0.05] border border-whiteBorder hover:border-pink transition p-4 rounded-[20px];
   }
 
   .title {
-    @apply font-bold lg:text-[42px] text-[24px]
+    @apply font-bold lg:text-[42px] text-[24px];
   }
 
   .subtitle {
-    @apply font-regular lg:text-[16px] text-[14px]
+    @apply font-regular lg:text-[16px] text-[14px];
+  }
+
+  .big-text {
+    background: -webkit-linear-gradient(90deg, #2563EB, #D946EF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

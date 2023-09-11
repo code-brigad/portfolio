@@ -16,7 +16,7 @@ const Mobile = ({ open, setOpen }) => {
             transition={{
               stiffness: 500,
             }}
-            className="absolute overflow-x-hidden md:hidden block top-0 left-0 w-full h-screen bg-[url('/images/menu.png')] bg-cover z-[101] flex flex-col justify-between"
+            className={`absolute overflow-x-hidden md:hidden block top-0 left-0 w-full h-screen bg-[url('/images/menu.png')] bg-cover flex flex-col justify-between`}
           >
             <div>
               <div className="my-2 py-2 px-6 flex flex-row justify-between items-center">

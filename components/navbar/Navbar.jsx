@@ -19,16 +19,14 @@ const Navbar = () => {
       window.removeEventListener("scroll", listenScroll);
     };
   }, [isScroll]);
-
-  console.log(open);
   return (
     <header className={`fixed z-[100] w-full`}>
       {isScroll ? (
         <motion.div
-          initial={{ scaleY: 0.6 }}
+          initial={{ scaleY: 0 }}
           animate={{ scaleY: 1 }}
-          transition={{ stiffness: 500 }}
-          className="w-full origin-top h-full absolute top-0 left-0 bg-[url('/images/navbar.png')] object-contain"
+          transition={{ stiffness: 200 }}
+          className="w-full origin-top h-full absolute top-0 left-0 bg-[#1D2432]/[0.8] backdrop-blur"
         ></motion.div>
       ) : (
         ""
