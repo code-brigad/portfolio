@@ -137,3 +137,18 @@
 .nav-link .active {
   @apply text-pink scale-110 transition
 }
+
+.progress-wheel circle {
+  stroke-dashoffset: 0;
+  stroke-width: 3;
+  fill: none;
+}
+
+.progress-wheel .bg {
+  stroke: #D946EF;
+}
+
+.progress-wheel .progress {
+  stroke: #D946EF;
+  stroke-dasharray: 0, 1;
+}

@@ -10,12 +10,16 @@ const Mobile = ({ open, setOpen }) => {
     <>
       {open ? (
         <>
-          <div className="w-full h-screen bg-[#FFF]/[0.05] backdrop-blur absolute top-0 left-0" onClick={() => setOpen(!open)}></div>
+          <div
+            className="w-full h-screen bg-[#FFF]/[0.05] md:hidden block backdrop-blur absolute top-0 left-0"
+            onClick={() => setOpen(!open)}
+          ></div>
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{
               stiffness: 500,
+              duration: 0.2,
             }}
             className={`absolute overflow-x-hidden md:hidden block top-0 left-0 min-w-[250px] w-[80%] h-screen bg-[url('/images/menu.png')] bg-cover flex flex-col justify-between`}
           >

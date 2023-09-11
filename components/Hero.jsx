@@ -1,9 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link as Scroll } from "react-scroll";
 
 const Hero = () => {
   return (
-    <section id="main" className="custom-container h-screen min-h-[600px] flex items-center gap-6 py-8 flex-col h-[500px] justify-center">
+    <section
+      id="main"
+      className="custom-container h-screen min-h-[600px] flex items-center gap-6 py-8 flex-col h-[500px] justify-center"
+    >
       <motion.h1
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -29,6 +33,47 @@ const Hero = () => {
       >
         Xizmatdan Foydalanish
       </motion.button>
+      <motion.div
+        animate={{
+          y: [0, 30, 0],
+        }}
+        transition={{
+          duration: 3,
+          ease: "easeInOut",
+          repeat: Infinity,
+        }}
+      >
+        <Scroll
+          to={"about"}
+          spy={true}
+          offset={-80}
+          smooth={true}
+          className="w-[50px] h-[50px] cursor-pointer hover:bg-pink/[0.1] transition relative top-[60px] border flex items-center justify-center rounded-full !rotate-90 border-pink"
+        >
+          <svg
+            width="18"
+            height="12"
+            viewBox="0 0 18 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16 5.99976L1 5.99976"
+              stroke="#D946EF"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M12 0.999878L16.2929 5.29277C16.6262 5.6261 16.7929 5.79277 16.7929 5.99988C16.7929 6.20698 16.6262 6.37365 16.2929 6.70698L12 10.9999"
+              stroke="#D946EF"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </Scroll>
+      </motion.div>
     </section>
   );
 };

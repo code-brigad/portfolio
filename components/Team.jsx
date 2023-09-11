@@ -1,9 +1,9 @@
-import { teamData } from "@/data/team";
 import React, { useEffect, useRef } from "react";
 import Slider from "react-slick";
-import { motion, useAnimation, useInView } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import { teamData } from "@/data/team";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const container = {
   hidden: { opacity: 0 },
@@ -13,14 +13,6 @@ const container = {
       delayChildren: 0.5,
       staggerChildren: 0.2,
     },
-  },
-};
-
-const item = {
-  hidden: { y: 10, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
   },
 };
 
@@ -46,14 +38,14 @@ const Team = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3
-        }
+          slidesToShow: 3,
+        },
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2
-        }
+          slidesToShow: 2,
+        },
       },
       {
         breakpoint: 640,
@@ -61,32 +53,33 @@ const Team = () => {
           slidesToShow: 1,
           dots: false,
           autoplay: true,
-          infinite: true
-        }
+          infinite: true,
+        },
       },
-    ]
+    ],
   };
 
   return (
-    <section id="team" className="custom-container flex flex-col w-full mt-[20px] gap-4">
-      <motion.div
-        ref={ref}
-        variants={container}
-        style={{
-          transform: isInView ? "none" : "translateY(100px)",
-          transition: "1s",
-        }}
-        initial="hidden"
-        animate="visible"
-        className="w-full flex flex-col items-center gap-2 justify-center text-center"
-      >
+    <motion.section
+      ref={ref}
+      variants={container}
+      style={{
+        transform: isInView ? "none" : "translateY(100px)",
+        transition: "1s",
+      }}
+      initial="hidden"
+      animate="visible"
+      id="team"
+      className="custom-container flex flex-col w-full mt-[20px] gap-4"
+    >
+      <div className="w-full flex flex-col items-center gap-2 justify-center text-center">
         <h1 className="font-bold text-[42px]">Bizning Jamoa</h1>
         <div className="lg:w-[300px] w-full">
           <p className="font-normal text-center">
             Bizning “brigadamiz” a’zolari o’z ishining mutaxasislaridan iborat:
           </p>
         </div>
-      </motion.div>
+      </div>
       <Slider {...settings}>
         {teamData.map((data) => {
           return (
@@ -105,7 +98,9 @@ const Team = () => {
                 <li className="font-medium text-center text-ellipsis truncate overflow-hidden font-avertaBold text-[20px]">
                   {data.name}
                 </li>
-                <li className="text-center uppercase truncate">{data.profession}</li>
+                <li className="text-center uppercase truncate">
+                  {data.profession}
+                </li>
                 <ul className="flex flex-row items-center gap-3 justify-center">
                   <li
                     className={`bg-pink rounded-full w-[28px] h-[28px] flex items-center justify-center ${
@@ -114,7 +109,14 @@ const Team = () => {
                         : "cursor-default opacity-50"
                     }`}
                   >
-                    <Link href={data.instagram} className={`${data.instagram.length > 0 ? "cursor-pointer" : "cursor-default"}`}>
+                    <Link
+                      href={data.instagram}
+                      className={`${
+                        data.instagram.length > 0
+                          ? "cursor-pointer"
+                          : "cursor-default"
+                      }`}
+                    >
                       <svg
                         width="14"
                         height="14"
@@ -136,7 +138,14 @@ const Team = () => {
                         : "cursor-default opacity-50"
                     }`}
                   >
-                    <Link href={data.linkedin} className={`${data.linkedin.length > 0 ? "cursor-pointer" : "cursor-default"}`}>
+                    <Link
+                      href={data.linkedin}
+                      className={`${
+                        data.linkedin.length > 0
+                          ? "cursor-pointer"
+                          : "cursor-default"
+                      }`}
+                    >
                       <svg
                         width="14"
                         height="14"
@@ -160,7 +169,14 @@ const Team = () => {
                         : "cursor-default opacity-50"
                     }`}
                   >
-                    <Link href={data.github} className={`${data.github.length > 0 ? "cursor-pointer" : "cursor-default"}`}>
+                    <Link
+                      href={data.github}
+                      className={`${
+                        data.github.length > 0
+                          ? "cursor-pointer"
+                          : "cursor-default"
+                      }`}
+                    >
                       <Image
                         src={"/images/icons/github.svg"}
                         alt="github"
@@ -176,7 +192,7 @@ const Team = () => {
           );
         })}
       </Slider>
-    </section>
+    </motion.section>
   );
 };
 
