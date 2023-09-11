@@ -116,6 +116,14 @@
   }
 }
 
+::-webkit-scrollbar {
+  @apply w-[8px] bg-[#fff]/[0.05]
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-pink rounded-full
+}
+
 .slick-slider .slick-dots  {
   @apply transition
 }

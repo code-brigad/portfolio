@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 const App = ({ Component, pageProps }) => {
   return (
     <main>
-      {/* <Cursor /> */}
+      <Cursor />
       <ScrollProgress />
       <Navbar />
       <Component {...pageProps} />

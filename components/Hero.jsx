@@ -11,7 +11,8 @@ const Hero = () => {
       <motion.h1
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ stiffness: 200 }}
+        
+        transition={{ stiffness: 200, duration: 0.4 }}
         className="md:text-[60px] text-center sm:text-[34px] text-[26px] md:w-[80%] w-full font-yaBold text-pink"
       >
         Kafolatlangan Natija va Sifat Uyg`unligi
@@ -19,7 +20,7 @@ const Hero = () => {
       <motion.p
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ stiffness: 200 }}
+        transition={{ stiffness: 200, duration: 0.4 }}
         className="text-[16px] text-center sm:w-[400px] w-full"
       >
         - Oliy sifatli xizmat, mutaxassislardan eksklyuziv tavsiyalar va
@@ -28,7 +29,7 @@ const Hero = () => {
       <motion.button
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ stiffness: 200 }}
+        transition={{ stiffness: 200, delay: 0.6 }}
         className="w-fit bg-linearBluePink hover:scale-110 transition-all duration-200 px-6 py-3 rounded-[10px] z-[102] active:scale-100 md:text-[16px] text-[14px]"
       >
         Xizmatdan Foydalanish
@@ -48,7 +49,7 @@ const Hero = () => {
           spy={true}
           offset={-80}
           smooth={true}
-          className="w-[50px] h-[50px] cursor-pointer hover:bg-pink/[0.1] transition relative top-[60px] border flex items-center justify-center rounded-full !rotate-90 border-pink"
+          className="w-[50px] h-[50px] cursor-pointer hover:bg-pink/[0.1] transition relative top-[60px] border-[2px] flex items-center justify-center rounded-full !rotate-90 border-pink"
         >
           <svg
             width="18"
