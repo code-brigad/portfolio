@@ -4,7 +4,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const Home = () => {
   return (
-    <main className="relative top-[100px]">
+    <main className='flex flex-col gap-4'>
       <Hero />
       <AboutUs />
     </main>
