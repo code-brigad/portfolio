@@ -77,7 +77,7 @@ const Footer = () => {
                 />
               </svg>
               <p>
-                <a href="tel:+998901234567">90 123 4567</a>
+                <Link href="tel:+998901234567">90 123 4567</Link>
               </p>
             </li>
             <li className="flex flex-row gap-2 items-center">
@@ -107,11 +107,11 @@ const Footer = () => {
                   stroke-linejoin="round"
                 />
               </svg>
-              <a href="mailto:support@brigade.uz">support@brigade.uz</a>
+              <Link href="mailto:support@brigade.uz">support@brigade.uz</Link>
             </li>
             <ul className="flex flex-row gap-3">
               <li className="p-[8px] border rounded-full opacity-[80%] hover:opacity-100 transition cursor-pointer">
-                <a href="/" className="">
+                <Link href="/" className="">
                   <Image
                     src={"/images/icons/telegram.svg"}
                     alt="telegram"
@@ -119,10 +119,10 @@ const Footer = () => {
                     height={500}
                     className="w-[20px]"
                   />
-                </a>
+                </Link>
               </li>
               <li className="p-[8px] border rounded-full opacity-[80%] hover:opacity-100 transition cursor-pointer">
-                <a href="/" className="">
+                <Link href="/" className="">
                   <Image
                     src={"/images/icons/instagram.svg"}
                     alt="telegram"
@@ -130,10 +130,10 @@ const Footer = () => {
                     height={500}
                     className="w-[20px]"
                   />
-                </a>
+                </Link>
               </li>
               <li className="p-[8px] border rounded-full opacity-[80%] hover:opacity-100 transition cursor-pointer">
-                <a href="/" className="">
+                <Link href="/" className="">
                   <Image
                     src={"/images/icons/linkedin.svg"}
                     alt="telegram"
@@ -141,10 +141,10 @@ const Footer = () => {
                     height={500}
                     className="w-[20px]"
                   />
-                </a>
+                </Link>
               </li>
               <li className="p-[8px] border rounded-full opacity-[80%] hover:opacity-100 transition cursor-pointer">
-                <a href="/" className="">
+                <Link href="/" className="">
                   <Image
                     src={"/images/icons/github.svg"}
                     alt="telegram"
@@ -152,7 +152,7 @@ const Footer = () => {
                     height={500}
                     className="w-[20px]"
                   />
-                </a>
+                </Link>
               </li>
             </ul>
           </ul>
