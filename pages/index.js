@@ -1,4 +1,4 @@
-import { Hero } from '@/components';
+import { Hero, Team } from '@/components';
 import AboutUs from '@/components/AboutUs';
 import Services from '@/components/Services';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
@@ -9,6 +9,7 @@ const Home = () => {
       <Hero />
       <AboutUs />
       <Services />
+      <Team />
     </main>
   )
 }
