@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="custom-container flex items-center gap-6 py-8 flex-col h-[500px] justify-center">
+    <section className="custom-container h-screen min-h-[500px] flex items-center gap-6 py-8 flex-col h-[500px] justify-center">
       <motion.h1
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
