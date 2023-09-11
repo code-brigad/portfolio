@@ -33,7 +33,7 @@ const Services = () => {
     }, [isInView])
     return (
         <div
-            className='custom-container flex flex-col lg:items-center items-start justify-center w-full mt-[20px] p-6'
+            className='custom-container flex flex-col lg:items-center items-start justify-center w-full mt-[20px] gap-4'
         >
             <motion.ul
                 ref={ref}
@@ -65,7 +65,7 @@ const Services = () => {
                 variants={container}
                 initial="hidden"
                 animate={mainControls}
-                className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:flex-row flex-col gap-[40px] p-6 lg:w-auto w-full'
+                className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:flex-row flex-col gap-4  lg:w-auto w-full'
             >
                 <motion.li
                     ref={ref}
@@ -75,7 +75,7 @@ const Services = () => {
                     <div className='bg-linearPurple w-[70px] rounded-full p-3'>
                         <Image src={"/images/icons/web.svg"} width={100} height={100} alt='app' />
                     </div>
-                    <p className='font-medium text-center'>Sayt Yaratish</p>
+                    <p className='font-medium text-center font-yaSemibold'>Sayt Yaratish</p>
                     <p className='w-[100%]'>Siz xohlagan dizayndagi va darajadagi web saytlarni qisqa muddatda tayyorlab beramiz.</p>
                     <button className='flex gap-[5px] items-center justify-center'>
                         <p>Ko’proq o’qish</p><Image src={"/images/icons/more-arrow.svg"} width={12} height={20} alt='app' />
@@ -85,7 +85,7 @@ const Services = () => {
                     <div className='bg-linearRed w-[70px] rounded-full p-3'>
                         <Image src={"/images/icons/apps.svg"} width={100} height={100} alt='app' />
                     </div>
-                    <p className='font-medium text-center'>Mobile App yaratish</p>
+                    <p className='font-medium text-center font-yaSemibold'>Mobile App yaratish</p>
                     <p className='w-[100%]'>Siz xohlagan dizayndagi va darajadagi mobile dasturlarni qisqa muddatda tayyorlab beramiz.</p>
                     <button className='flex gap-[5px] items-center justify-center'>
                         <p>Ko’proq o’qish</p><Image src={"/images/icons/more-arrow.svg"} width={12} height={20} alt='app' />
@@ -95,7 +95,7 @@ const Services = () => {
                     <div className='bg-linearBlue w-[70px] rounded-full p-3'>
                         <Image src={"/images/icons/crm.svg"} width={100} height={100} alt='app' />
                     </div>
-                    <p className='font-medium text-center'>CRM Dastur</p>
+                    <p className='font-medium text-center font-yaSemibold'>CRM Dastur</p>
                     <p className='w-[100%]'>
                         Siz xohlagan dizayndagi va darajadagi CRM Dasturlarni tyyorlab beramiz.
                     </p>
@@ -107,7 +107,7 @@ const Services = () => {
                     <div className='bg-linearGreen w-[70px] rounded-full p-3'>
                         <Image src={"/images/icons/design.svg"} width={100} height={100} alt='app' />
                     </div>
-                    <p className='font-medium text-center'>Dizayn tayyorlash</p>
+                    <p className='font-medium text-center font-yaSemibold'>Dizayn tayyorlash</p>
                     <p className='w-[100%]'>
                         Siz xohlagan turdagi dizaynlarni qisqa muddatda tayyorlab beramiz.
                     </p>
@@ -119,7 +119,7 @@ const Services = () => {
                     <div className='bg-linearAqua w-[70px] rounded-full p-3'>
                         <Image src={"/images/icons/smm.svg"} width={100} height={100} alt='app' />
                     </div>
-                    <p className='font-medium text-center'>SMM Xizmati</p>
+                    <p className='font-medium text-center font-yaSemibold'>SMM Xizmati</p>
                     <p className='w-[100%]'>
                         Biz sizning ijtimoiy tarmoqlardagi saxifalaringizni siz xohlagan darajaga olib chiqib beramiz.
                     </p>
