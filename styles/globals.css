@@ -46,7 +46,7 @@
 
 @layer base {
   body {
-    @apply m-0 p-0 w-screen bg-black h-screen outline-none list-none box-border font-regular text-white w-full h-full;
+    @apply m-0 p-0 w-screen bg-black bg-[url("/images/background.png")] bg-cover h-screen outline-none list-none box-border font-regular text-white w-full h-full;
   }
 }
 

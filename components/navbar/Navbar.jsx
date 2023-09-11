@@ -20,7 +20,7 @@ const Navbar = () => {
     };
   }, [isScroll]);
   return (
-    <header className={`fixed z-[100] w-full`}>
+    <header className={`fixed z-[200] w-full`}>
       {isScroll ? (
         <motion.div
           initial={{ scaleY: 0 }}
