@@ -1,5 +1,6 @@
 import { Hero } from '@/components';
 import AboutUs from '@/components/AboutUs';
+import Services from '@/components/Services';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     <main className="relative top-[100px]">
       <Hero />
       <AboutUs />
+      <Services />
     </main>
   )
 }

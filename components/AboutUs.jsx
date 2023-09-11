@@ -47,6 +47,7 @@ const AboutUs = () => {
                 <motion.li
                     ref={ref}
                     variants={item}
+                    className='flex flex-col items-center'
                 >
                     <h1 className='font-bold text-[42px]'>Biz Haqimizda</h1>
                     <p className='font-normal lg:w-[70%] w-full text-center'>“Dasturchilar brigadasi” uchun sifat va son birday muhim!</p>
