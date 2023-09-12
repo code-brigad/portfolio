@@ -3,9 +3,6 @@ import { motion } from "framer-motion";
 
 const Cursor = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const ref = useRef();
-
-  console.log(mousePosition);
 
   useEffect(() => {
     const mouseMove = (e) => {
@@ -28,9 +25,9 @@ const Cursor = () => {
   return (
     <motion.div
       variants={variants}
-      transition={{ duration: 0 }}
+      transition={{ duration: 0.1 }}
       animate="default"
-      className="lg:block hidden w-[100px] h-[100px] pointer-events-none rounded-full blur-[90px] bg-pink fixed top-0 left-0"
+      className="md:block hidden w-[100px] h-[100px] pointer-events-none rounded-full blur-[90px] bg-pink fixed top-0 left-0"
     />
   );
 };

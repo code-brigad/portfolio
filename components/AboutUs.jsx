@@ -54,12 +54,14 @@ const AboutUs = () => {
         variants={container}
         initial="hidden"
         animate={mainControls}
+        transition={{ delay: 0 }}
         className="grid lg:grid-cols-3 grid-cols-1 gap-4 lg:w-auto w-full"
       >
         <motion.li
           ref={ref}
           className="flex custom-shadow flex-col gap-[10px] section-item md:!px-6 px-3"
           variants={item}
+          transition={{ delay: 0 }}
         >
           <h1 className="font-bold text-[42px] font-yaBold">1 +</h1>
           <p className="font-normal">Yillik tajriba</p>

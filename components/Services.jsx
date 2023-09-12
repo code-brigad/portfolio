@@ -1,6 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import Image from "next/image";
+import { servicesData } from "@/data/services";
+import { ServicesInfo } from "@/ui";
 
 const container = {
   hidden: { opacity: 0 },
@@ -13,25 +15,23 @@ const container = {
   },
 };
 
-const item = {
-  hidden: { y: 10, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-  },
-};
-
 const Services = () => {
+  const [open, setOpen] = useState(1);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
+
   useEffect(() => {
     if (isInView) {
       mainControls.start("visible");
     }
   }, [isInView]);
+
   return (
-    <section id="services" className="custom-container flex flex-col lg:items-center items-start justify-center w-full mt-[20px] gap-4">
+    <section
+      id="services"
+      className="custom-container flex flex-col lg:items-center items-start justify-center w-full mt-[20px] gap-4"
+    >
       <motion.div
         ref={ref}
         variants={container}
@@ -51,162 +51,42 @@ const Services = () => {
           </p>
         </div>
       </motion.div>
-      <motion.ul
-        ref={ref}
-        style={{
-          transition: "1s",
-        }}
-        variants={container}
-        initial="hidden"
-        animate={mainControls}
-        className="grid lg:grid-cols-3 items-center place-content-center md:grid-cols-2 grid-cols-1 lg:flex-row flex-col gap-4  lg:w-auto w-full"
-      >
-        <motion.li
-          ref={ref}
-          className="flex flex-col gap-[10px] section-item !px-6 items-center"
-          variants={item}
-        >
-          <div className="bg-linearPurple w-[70px] rounded-full p-3">
-            <Image
-              src={"/images/icons/web.svg"}
-              width={100}
-              height={100}
-              alt="app"
-            />
-          </div>
-          <p className="font-medium text-center font-avertaBold text-[20px]">
-            Sayt Yaratish
-          </p>
-          <p className="w-[100%]">
-            Siz xohlagan dizayndagi va darajadagi web saytlarni qisqa muddatda
-            tayyorlab beramiz.
-          </p>
-          <button className="flex gap-[5px] items-center justify-center">
-            <p>Ko’proq o’qish</p>
-            <Image
-              src={"/images/icons/more-arrow.svg"}
-              width={12}
-              height={20}
-              alt="app"
-            />
-          </button>
-        </motion.li>
-        <motion.li
-          className="flex flex-col gap-[10px] section-item !px-6 items-center"
-          variants={item}
-        >
-          <div className="bg-linearRed w-[70px] rounded-full p-3">
-            <Image
-              src={"/images/icons/apps.svg"}
-              width={100}
-              height={100}
-              alt="app"
-            />
-          </div>
-          <p className="font-medium text-center font-avertaBold text-[20px]">
-            Mobile App yaratish
-          </p>
-          <p className="w-[100%]">
-            Siz xohlagan dizayndagi va darajadagi mobile dasturlarni qisqa
-            muddatda tayyorlab beramiz.
-          </p>
-          <button className="flex gap-[5px] items-center justify-center">
-            <p>Ko’proq o’qish</p>
-            <Image
-              src={"/images/icons/more-arrow.svg"}
-              width={12}
-              height={20}
-              alt="app"
-            />
-          </button>
-        </motion.li>
-        <motion.li
-          className="flex flex-col gap-[10px] section-item !px-6 items-center"
-          variants={item}
-        >
-          <div className="bg-linearBlue w-[70px] rounded-full p-3">
-            <Image
-              src={"/images/icons/crm.svg"}
-              width={100}
-              height={100}
-              alt="app"
-            />
-          </div>
-          <p className="font-medium text-center font-avertaBold text-[20px]">
-            CRM Dastur
-          </p>
-          <p className="w-[100%]">
-            Siz xohlagan dizayndagi va darajadagi CRM Dasturlarni tyyorlab
-            beramiz.
-          </p>
-          <button className="flex gap-[5px] items-center justify-center">
-            <p>Ko’proq o’qish</p>
-            <Image
-              src={"/images/icons/more-arrow.svg"}
-              width={12}
-              height={20}
-              alt="app"
-            />
-          </button>
-        </motion.li>
-        <motion.li
-          className="flex flex-col gap-[10px] section-item !px-6 items-center"
-          variants={item}
-        >
-          <div className="bg-linearGreen w-[70px] rounded-full p-3">
-            <Image
-              src={"/images/icons/design.svg"}
-              width={100}
-              height={100}
-              alt="app"
-            />
-          </div>
-          <p className="font-medium text-center font-avertaBold text-[20px]">
-            Dizayn tayyorlash
-          </p>
-          <p className="w-[100%]">
-            Siz xohlagan turdagi dizaynlarni qisqa muddatda tayyorlab beramiz.
-          </p>
-          <button className="flex gap-[5px] items-center justify-center">
-            <p>Ko’proq o’qish</p>
-            <Image
-              src={"/images/icons/more-arrow.svg"}
-              width={12}
-              height={20}
-              alt="app"
-            />
-          </button>
-        </motion.li>
-        <motion.li
-          className="flex flex-col gap-[10px] section-item !px-6 items-center"
-          variants={item}
-        >
-          <div className="bg-linearAqua w-[70px] rounded-full p-3">
-            <Image
-              src={"/images/icons/smm.svg"}
-              width={100}
-              height={100}
-              alt="app"
-            />
-          </div>
-          <p className="font-medium text-center font-avertaBold text-[20px]">
-            SMM Xizmati
-          </p>
-          <p className="w-[100%]">
-            Biz sizning ijtimoiy tarmoqlardagi saxifalaringizni siz xohlagan
-            darajaga olib chiqib beramiz.
-          </p>
-          <button className="flex gap-[5px] items-center justify-center">
-            <p>Ko’proq o’qish</p>
-            <Image
-              src={"/images/icons/more-arrow.svg"}
-              width={12}
-              height={20}
-              alt="app"
-            />
-          </button>
-        </motion.li>
-      </motion.ul>
+      <div className="w-full gap-6 grid md:grid-cols-2 grid-cols-1">
+        <div className="flex flex-col gap-6">
+          {servicesData.map((data) => {
+            return <ServicesInfo open={open} setOpen={setOpen} data={data} />;
+          })}
+        </div>
+        <div className="md:block hidden h-fit sticky top-[25%] translate-[-50%]">
+          {servicesData.map((data) => {
+            return (
+              <>
+                {open == data.id ? (
+                  <motion.div
+                    initial={{ scale: 0.2 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 0.3 }}
+                    key={data.id}
+                    className="flex items-center justify-center"
+                  >
+                    <div className="lg:w-[60%] w-full h-fit p-8 flex items-center justify-center section-item custom-shadow">
+                      <Image
+                        src={data.photo}
+                        alt={data.title}
+                        width={500}
+                        height={500}
+                        className="md:w-full w-[60%] pointer-events-none"
+                      />
+                    </div>
+                  </motion.div>
+                ) : (
+                  ""
+                )}
+              </>
+            );
+          })}
+        </div>
+      </div>
     </section>
   );
 };

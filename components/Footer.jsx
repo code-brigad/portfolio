@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="custom-container mt-8">
+    <footer className="custom-container mt-8">
       <ul className="flex lg:flex-row flex-col justify-between lg:gap-4 gap-10">
         <li>
           <ul className="flex flex-col gap-3">
@@ -238,7 +238,7 @@ const Footer = () => {
         <li>© 2023 Code Brigade - All rights reserved.</li>
         <li>Maxfiylik Siyosati</li>
       </ul>
-    </div>
+    </footer>
   );
 };
 

@@ -17,7 +17,6 @@ const ScrollProgress = () => {
   }, []);
 
   const [isScroll, setIsScroll] = useState(false);
-  console.log(isScroll, "scroll");
   const listenScroll = () => {
     window.scrollY > 100 ? setIsScroll(true) : setIsScroll(false);
   };
