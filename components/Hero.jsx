@@ -1,17 +1,24 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Link as Scroll } from "react-scroll";
 
 const Hero = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "80%"]);
+
   return (
-    <section
+    <motion.section
+      style={{ y }}
       id="main"
       className="custom-container h-screen min-h-[600px] flex items-center gap-6 py-8 flex-col h-[500px] justify-center"
     >
       <motion.h1
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        
         transition={{ stiffness: 200, duration: 0.4 }}
         className="md:text-[60px] text-center sm:text-[34px] text-[26px] md:w-[80%] w-full font-yaBold text-pink"
       >
@@ -49,7 +56,7 @@ const Hero = () => {
           spy={true}
           offset={-80}
           smooth={true}
-          className="w-[50px] h-[50px] cursor-pointer hover:bg-pink/[0.1] transition relative top-[60px] border-[2px] flex items-center justify-center rounded-full !rotate-90 border-pink"
+          className="w-[50px] h-[50px] cursor-pointer hover:bg-pink/[0.1] transition relative border-[2px] flex items-center justify-center rounded-full !rotate-90 border-pink"
         >
           <svg
             width="18"
@@ -75,7 +82,7 @@ const Hero = () => {
           </svg>
         </Scroll>
       </motion.div>
-    </section>
+    </motion.section>
   );
 };
 

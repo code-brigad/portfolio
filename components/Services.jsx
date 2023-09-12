@@ -54,7 +54,7 @@ const Services = () => {
       <div className="w-full gap-6 grid md:grid-cols-2 grid-cols-1">
         <div className="flex flex-col gap-6">
           {servicesData.map((data) => {
-            return <ServicesInfo open={open} setOpen={setOpen} data={data} />;
+            return <ServicesInfo key={data.id} open={open} setOpen={setOpen} data={data} />;
           })}
         </div>
         <div className="md:block hidden h-fit sticky top-[25%] translate-[-50%]">
