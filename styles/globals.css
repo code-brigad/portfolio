@@ -82,7 +82,7 @@
   }
 
   .custom-container {
-    @apply max-w-[1400px] mx-auto px-6;
+    @apply max-w-[1400px] mx-auto px-3;
   }
 
   .custom-shadow {

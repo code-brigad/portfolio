@@ -5,7 +5,7 @@ export const selectData = [
     },
     {
         id: 2,
-        title: 'Mobile App yaratish'
+        title: 'Mobile Dastur yaratish'
     },
     {
         id: 3,
