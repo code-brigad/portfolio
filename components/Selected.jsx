@@ -43,7 +43,6 @@ function useMenuAnimation(isOpen) {
 }
 
 const Selected = () => {
-    const [hidden, setHidden] = useState(true)
     const [isOpen, setIsOpen] = useState(false);
     const scope = useMenuAnimation(isOpen);
     const [select, setSelect] = useState({
@@ -59,7 +58,7 @@ const Selected = () => {
             >
                 <h1>{select?.title}</h1>
                 <div className="arrow" style={{ transformOrigin: "50% 55%" }}>
-                    <Image src={selected} className='rotate-180 z-1' width={15} />
+                    <Image alt='open-arrow' src={selected} className='rotate-180 z-1' width={15} />
                 </div>
             </motion.button>
             <ul
@@ -71,7 +70,7 @@ const Selected = () => {
                 className="flex mt-[10px] z-[2] bg-black overflow-hidden section-item flex-col !p-0 absolute top-[50px] left-0 w-full">
                 {selectData.map((e) => {
                     return (
-                        <li className={`w-full p-4 rounded-[0px] hover:bg-[#FFF]/[0.05] ${e.id == select?.id ? "bg-pink hover:bg-pink" : ""}`}
+                        <li key={e.id} className={`w-full p-4 rounded-[0px] hover:bg-[#FFF]/[0.05] ${e.id == select?.id ? "bg-pink hover:bg-pink" : ""}`}
                             onClick={() => {
                                 setSelect(e)
                                 setIsOpen(false)
