@@ -1,8 +1,4 @@
-import { AboutUs, Hero, Services, Team } from '@/components';
-import { Hero, Team } from '@/components';
-import AboutUs from '@/components/AboutUs';
-import Contact from '@/components/Contact';
-import Services from '@/components/Services';
+import { AboutUs, Hero, Services, Team, Contact } from '@/components';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const Home = () => {
