@@ -27,7 +27,7 @@ const Cursor = () => {
       variants={variants}
       transition={{ duration: 0.1 }}
       animate="default"
-      className="md:block hidden w-[100px] h-[100px] pointer-events-none rounded-full blur-[90px] bg-pink fixed top-0 left-0"
+      className="md:block hidden w-[100px] h-[100px] pointer-events-none rounded-full blur-[130px] bg-pink fixed top-0 left-0"
     />
   );
 };
