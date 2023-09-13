@@ -46,10 +46,17 @@ const Contact = () => {
     const [name, setName] = useState("")
     const [phone, setPhone] = useState("")
     const [msg, setMsg] = useState("")
+    console.log(msg);
+
+    const [select, setSelect] = useState({
+        id: 0,
+        title: "Xizmat turi"
+    })
+    console.log(select, "father");
 
     const [nameE, setNameE] = useState(false)
     const [phoneE, setPhoneE] = useState(false)
-    const [msgE, setMsgE] = useState(false)
+    const [selectE, setSelectE] = useState(false)
     const [errorMsg, setErrorMsg] = useState(false)
 
     const [isLoading, setIsLoading] = useState(false)
@@ -57,7 +64,7 @@ const Contact = () => {
     const sendData = async (e) => {
         e.preventDefault()
 
-        if (name.length < 3 && phone.length < 11 && msg.length < 4) {
+        if (name.length < 3 && phone.length < 11 && select.id == 0) {
             setErrorMsg(true)
             return
         }
@@ -67,15 +74,16 @@ const Contact = () => {
             return
         }
 
+        if (select.id == 0) {
+            setSelectE(true)
+            return
+        }
+
         if (phone.length < 11) {
             setPhoneE(true)
             return
         }
 
-        if (msg.length < 4) {
-            setMsgE(true)
-            return
-        }
 
         setIsLoading(true)
         const message = `👤Yangi foydalanuvchi
@@ -97,7 +105,7 @@ const Contact = () => {
             setNameE(false)
             setErrorMsg(false)
             setPhoneE(false)
-            setMsgE(false)
+            selectE(false)
             setName("")
             setPhone("")
             setMsg("")
@@ -127,10 +135,19 @@ const Contact = () => {
                     <p className='font-normal md:w-[50%] w-full text-center'>Biz bilan bog’lanish va xizmatlarimizdan foydalanish uchun quyidagi ma’lumotlarni
                         to’ldiring va “yuborish” tugmasini bosing.
                     </p>
-                    <input type="text" className='outline-none section-item md:w-[80%] w-full' placeholder='Ismingiz' />
-                    <Selected />
-                    {/* <TextMaskCustom type="tel" value={phone} id="phone" className='focus:outline-none focus:border focus:border-[#DC4298] outline-none w-full block border border-[0.45px] px-8 py-2 border-[#DCDCE5] rounded-[3.36px]' placeholder='+998(99)-000-00-00' onChange={(e) => setPhone(e.target.value)} /> */}
-                    <button className='flex px-6 py-3 rounded-[10px] bg-linearBluePink justify-center items-center gap-[10px]'>
+                    <div className='md:w-[80%] w-full flex flex-col justify-center gap-[10px]'>
+                        <input type="text" onChange={(e) => setName(e.target.value)} className='outline-none section-item w-full' placeholder='Ismingiz' />
+                        {nameE ? <h1 className='text-[red]'>Ism kiritilmadi</h1> : ""}
+                    </div>
+                    <div className='md:w-[80%] w-full flex flex-col justify-center gap-[10px]'>
+                        <Selected setSelect={setSelect} select={select} />
+                        {selectE ? <h1 className='text-[red]'>Xizmat turi tanlanmadi</h1> : ""}
+                    </div>
+                    <div className='md:w-[80%] w-full flex flex-col justify-center gap-[10px]'>
+                        <TextMaskCustom type="tel" value={phone} id="phone" className='outline-none section-item w-full' placeholder='Telefon raqam' onChange={(e) => setPhone(e.target.value)} />
+                        {phoneE ? <h1 className='text-[red]'>Telefon nomer kiritilmadi</h1> : ""}
+                    </div>
+                    <button onClick={sendData} className='flex px-6 py-3 rounded-[10px] bg-linearBluePink justify-center items-center gap-[10px]'>
                         <Image alt='submit' src={submit} width={15} />
                         <p>Yuborish</p>
                     </button>

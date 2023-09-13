@@ -42,15 +42,13 @@ function useMenuAnimation(isOpen) {
     return scope;
 }
 
-const Selected = () => {
+const Selected = ({ select, setSelect }) => {
+    console.log(select, "child");
     const [isOpen, setIsOpen] = useState(false);
     const scope = useMenuAnimation(isOpen);
-    const [select, setSelect] = useState({
-        id: 0,
-        title: "Xizmat turi"
-    })
+
     return (
-        <nav className="section-item menu md:w-[80%] w-full h-[50px] relative" ref={scope}>
+        <nav className="section-item menu w-full h-[50px] relative" ref={scope}>
             <motion.button
                 whileTap={{ scale: 0.97 }}
                 onClick={() => setIsOpen(!isOpen)}
