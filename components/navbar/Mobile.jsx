@@ -21,7 +21,7 @@ const Mobile = ({ open, setOpen }) => {
               stiffness: 500,
               duration: 0.2,
             }}
-            className={`absolute overflow-x-hidden md:hidden block top-0 left-0 min-w-[250px] w-[80%] h-screen bg-[url('/images/menu.png')] bg-cover flex flex-col justify-between`}
+            className={`absolute overflow-x-hidden md:hidden block top-0 left-0 min-w-[250px] w-[80%] h-screen bg-black flex flex-col justify-between`}
           >
             <div>
               <div className="my-2 py-2 px-6 flex flex-row justify-between items-center">

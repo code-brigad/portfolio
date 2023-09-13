@@ -124,7 +124,7 @@ const Contact = () => {
       style={{
         scale,
       }}
-      id="team"
+      id="contact"
       className="custom-container flex flex-col w-full mt-[20px] gap-4"
     >
       <div className="w-full">
