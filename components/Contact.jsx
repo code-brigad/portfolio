@@ -179,7 +179,7 @@ const Contact = () => {
           </div>
           {errorMsg ? (
             <h1 className="text-[red] text-[14px] text-start">
-              Ma'lumotlar kiritilmadi!
+              Ma&apos;lumotlar kiritilmadi!
             </h1>
           ) : (
             ""
