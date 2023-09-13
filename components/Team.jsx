@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import Slider from "react-slick";
 import Link from "next/link";
 import Image from "next/image";
 import { teamData } from "@/data/team";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const container = {
   hidden: { opacity: 0 },
@@ -17,23 +17,22 @@ const container = {
 };
 
 const Team = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-  const mainControls = useAnimation();
-  useEffect(() => {
-    if (isInView) {
-      mainControls.start("visible");
-    }
-  }, [isInView]);
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end"],
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 1], ["0.2", "1"]);
+
   const settings = {
     arrows: false,
-    dots: true,
-    infinite: false,
+    dots: false,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    appendDots: (dots) => <ul>{dots}</ul>,
-    customPaging: (i) => <div className="custom-dots" />,
+    autoplay: true,
+    infinite: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -51,9 +50,6 @@ const Team = () => {
         breakpoint: 640,
         settings: {
           slidesToShow: 1,
-          dots: false,
-          autoplay: true,
-          infinite: true,
         },
       },
     ],
@@ -61,11 +57,10 @@ const Team = () => {
 
   return (
     <motion.section
-      ref={ref}
+      ref={containerRef}
       variants={container}
       style={{
-        transform: isInView ? "none" : "translateY(100px)",
-        transition: "1s",
+        scale,
       }}
       initial="hidden"
       animate="visible"

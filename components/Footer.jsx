@@ -161,22 +161,22 @@ const Footer = () => {
           <ul className="flex flex-col gap-3">
             <li className="font-avertaSemiBold text-[18px] mb-1">Xizmatlar</li>
             <li className="cursor-pointer">
-              <Scroll to={"/"} spy={true} offset={-50} smooth={true}>
+              <Scroll to={"/"} spy={true} offset={-170} smooth={true}>
                 Sayt Yaratish
               </Scroll>
             </li>
             <li className="cursor-pointer">
-              <Scroll to={"/"} spy={true} offset={-50} smooth={true}>
+              <Scroll to={"/"} spy={true} offset={-170} smooth={true}>
                 Mobile App Yaratish
               </Scroll>
             </li>
             <li className="cursor-pointer">
-              <Scroll to={"/"} spy={true} offset={-50} smooth={true}>
+              <Scroll to={"/"} spy={true} offset={-170} smooth={true}>
                 SMM Xizmati
               </Scroll>
             </li>
             <li className="cursor-pointer">
-              <Scroll to={"/"} spy={true} offset={-50} smooth={true}>
+              <Scroll to={"/"} spy={true} offset={-170} smooth={true}>
                 Dizayn Tayyorlash
               </Scroll>
             </li>
@@ -186,7 +186,7 @@ const Footer = () => {
           <ul className="flex flex-col gap-3">
             <li className="font-avertaSemiBold text-[18px] mb-1">Companiya</li>
             <li className="cursor-pointer">
-              <Scroll to={"about"} spy={true} offset={-80} smooth={true}>
+              <Scroll to={"about"} spy={true} offset={-170} smooth={true}>
                 Ma’lumot
               </Scroll>
             </li>

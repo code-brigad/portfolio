@@ -71,7 +71,7 @@ const Mobile = ({ open, setOpen }) => {
                         <Scroll
                           to={data.link}
                           spy={true}
-                          offset={-80}
+                          offset={-170}
                           smooth={true}
                           className="block"
                         >
@@ -85,7 +85,7 @@ const Mobile = ({ open, setOpen }) => {
             </div>
             <div className="px-6 py-4">
               <button className="rounded-[10px] bg-linearBluePink w-full px-4 transition-all duration-300 px-6 py-3 custom-shadow">
-                <Scroll to="contact" spy={true} offset={-80} smooth={true}>
+                <Scroll to="contact" spy={true} offset={-170} smooth={true}>
                   Bog`lanish
                 </Scroll>
               </button>

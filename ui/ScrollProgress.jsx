@@ -42,7 +42,7 @@ const ScrollProgress = () => {
       <Scroll
         to={"main"}
         spy={true}
-        offset={-80}
+        offset={-170}
         smooth={true}
         className="w-[50px] block h-[50px] bg-pink/[0.1] backdrop-blur rounded-full relative"
       >
