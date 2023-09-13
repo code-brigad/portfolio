@@ -54,7 +54,7 @@ const Hero = () => {
         <Scroll
           to={"about"}
           spy={true}
-          offset={-80}
+          offset={-170}
           smooth={true}
           className="w-[50px] h-[50px] cursor-pointer hover:bg-pink/[0.1] transition relative border-[2px] flex items-center justify-center rounded-full !rotate-90 border-pink"
         >
