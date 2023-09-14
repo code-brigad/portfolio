@@ -148,3 +148,7 @@
   stroke: #D946EF;
   stroke-dasharray: 0, 1;
 }
+
+.scroll::-webkit-scrollbar {
+    @apply hidden
+}

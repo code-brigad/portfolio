@@ -41,10 +41,9 @@ function useMenuAnimation(isOpen) {
   return scope;
 }
 
-const Selected = ({ select, setSelect }) => {
+const Selected = ({ select, setSelect, mb, height }) => {
   const [isOpen, setIsOpen] = useState(false);
   const scope = useMenuAnimation(isOpen);
-
   return (
     <nav className="section-item !p-0 menu w-full h-full relative custom-shadow" ref={scope}>
       <motion.button
@@ -68,15 +67,14 @@ const Selected = ({ select, setSelect }) => {
           style:
             "bg-black section-item gap-[10px] flex-col !p-0 absolute top-[50px] left-0 w-full",
         }}
-        className="flex mt-[10px] z-[2] bg-black overflow-hidden section-item flex-col !p-0 absolute top-[60px] left-0 w-full"
+        className={`${mb ? mb : "mt-[10px]"} overflow-y-auto scroll ${height ? height : ""} flex z-[2] bg-black overflow-hidden section-item flex-col !p-0 absolute top-[60px] left-0 w-full`}
       >
         {selectData.map((e) => {
           return (
             <li
               key={e.id}
-              className={`w-full cursor-pointer p-4 rounded-[0px] hover:bg-[#FFF]/[0.05] ${
-                e.id == select?.id ? "bg-pink hover:bg-pink" : ""
-              }`}
+              className={`w-full cursor-pointer p-4 rounded-[0px] hover:bg-[#FFF]/[0.05] ${e.id == select?.id ? "bg-pink hover:bg-pink" : ""
+                }`}
               onClick={() => {
                 setSelect(e);
                 setIsOpen(false);

@@ -141,6 +141,7 @@ const Contact = () => {
                 onChange={(e) => setName(e.target.value)}
                 className="outline-none section-item w-full h-full"
                 placeholder="Ismingiz"
+                autocomplete="off"
                 value={name}
               />
               {nameE ? (
@@ -163,6 +164,7 @@ const Contact = () => {
               <TextMaskCustom
                 type="tel"
                 value={phone}
+                autocomplete="off"
                 id="phone"
                 className="outline-none section-item w-full h-full"
                 placeholder="Telefon raqam"
