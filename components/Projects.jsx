@@ -65,7 +65,7 @@ const Projects = () => {
                 <p>{data.desc}</p>
                 <Link href={data.link} target="_blank" className="h-fit">
                   <button className="bg-linearBluePink sm:hover:scale-110 hover:scale-100 transition-all duration-200 px-6 py-3 rounded-[10px] z-[102] sm:active:scale-100 active:scale-90 sm:w-fit w-full">
-                    Ko'rish
+                    Ko&apos;rish
                   </button>
                 </Link>
               </div>
