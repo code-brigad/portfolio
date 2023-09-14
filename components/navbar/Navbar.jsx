@@ -57,11 +57,11 @@ const Navbar = () => {
               })}
             </ul>
           </div>
-          <button className="bg-linearBluePink hover:scale-110 transition-all duration-200 px-6 py-3 rounded-[10px] z-[102] active:scale-100 md:block hidden">
-            <Scroll to={'contact'} spy={true} offset={-170} smooth={true}>
+          <Scroll to={"contact"} spy={true} offset={-170} smooth={true}>
+            <button className="bg-linearBluePink hover:scale-110 transition-all duration-200 px-6 py-3 rounded-[10px] z-[102] active:scale-100 md:block hidden">
               Bog`lanish
-            </Scroll>
-          </button>
+            </button>
+          </Scroll>
           <button className="md:hidden block" onClick={() => setOpen(!open)}>
             <svg
               width="18"

@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion, useScroll } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import axios from "axios";
 import Selected from "@/components/Selected";
 import { IMaskInput } from "react-imask";
+import { bot_token, chat_id } from "@/data/constants";
 
 const TextMaskCustom = React.forwardRef(function TextMaskCustom(props, ref) {
   const { onChange, ...other } = props;
@@ -96,6 +97,7 @@ const ContactMo = ({ open, setOpen }) => {
       setSelect({ id: 0, title: "Xizmat turi" });
       setIsLoading(false);
     } catch (error) {
+      console.log(error);
       setIsLoading(false);
     }
   };
@@ -112,17 +114,17 @@ const ContactMo = ({ open, setOpen }) => {
   return (
     <AnimatePresence>
       {open && (
-        <section className="fixed overflow-y-auto top-0 left-0 w-full h-screen bg-white/[0.05] z-[500] backdrop-blur flex items-center">
+        <section className="fixed overflow-y-auto top-0 left-0 w-full h-screen bg-white/[0.05] z-[500] backdrop-blur flex items-center px-3">
           <motion.div
             initial={{ scale: 0.2, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0, opacity: 0 }}
-            className="md:p-6 p-3 bg-black md:w-[60%] w-[90%] m-auto rounded-[10px] custom-shadow"
+            className="md:p-6 p-3 bg-black md:w-[60%] w-[100%] m-auto rounded-[10px] custom-shadow"
           >
-            <div className="flex items-center justify-between">
-              <p>Xizmatdan Foydalanish</p>
+            <div className=" w-full flex items-center justify-between">
+              <p className="md:text-[20px] text-[16px]">Xizmatdan Foydalanish</p>
               <div
-                className="w-[35px] h-[35px] p-2 flex items-center justify-center bg-white/[0.05] cursor-pointer rounded-full"
+                className="w-[32px] h-[32px] p-2 flex items-center justify-center bg-white/[0.05] cursor-pointer rounded-full"
                 onClick={() => setOpen(!open)}
               >
                 <svg
