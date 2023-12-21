@@ -46,7 +46,7 @@ export default function Document() {
         />
         <meta name="title" content="Kafolatlangan Natija va Sifat Uyg`unligi" />
         <meta name="author" content="https://code-brigade.vercel.app/"></meta>
-        <meta name="keywords" content="Brigade, Code Brigade, Developers, Dasturchilar Brigadasi, Web Sayt Yaratish, Dastur yaratish, IT Xizmatlar" />
+        <meta name="googlebot" content="index,follow"></meta>
 
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Code Brigade - Dasturchilar Brigadasi" />
