@@ -68,6 +68,7 @@ export default function Document() {
           name="google-site-verification"
           content="cLtBTqczJIG3OKN0wE0NQksawkSot26UY8ju3GGwibs"
         />
+        <meta name="robots" content="index,follow">
       </Head>
       <body>
         <Main />
