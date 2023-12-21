@@ -64,6 +64,10 @@ export default function Document() {
         <meta property="twitter:image" content="/images/site-img.png" />
         <meta property="twitter:image:width" content="500" />
         <meta property="twitter:image:height" content="293" />
+        <meta
+          name="google-site-verification"
+          content="cLtBTqczJIG3OKN0wE0NQksawkSot26UY8ju3GGwibs"
+        />
       </Head>
       <body>
         <Main />
